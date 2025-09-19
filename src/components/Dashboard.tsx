@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Search, Filter, AlertTriangle, TrendingUp, Users, DollarSign } from 'lucide-react';
+import { useState, useRef } from 'react';
+import { Search, Filter, AlertTriangle, TrendingUp, Users, DollarSign, Upload } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -12,20 +12,43 @@ import { Customer } from '@/types/customer';
 export function Dashboard() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCustomer, setSelectedCustomer] = useState<Customer | null>(null);
+  const [customers, setCustomers] = useState<Customer[]>(mockCustomers);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   
-  const filteredCustomers = mockCustomers.filter(customer =>
+  const filteredCustomers = customers.filter(customer =>
     customer.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     customer.city.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const riskStats = {
-    high: mockCustomers.filter(c => c.riskRating === 'high').length,
-    medium: mockCustomers.filter(c => c.riskRating === 'medium').length,
-    low: mockCustomers.filter(c => c.riskRating === 'low').length,
+    high: customers.filter(c => c.riskRating === 'high').length,
+    medium: customers.filter(c => c.riskRating === 'medium').length,
+    low: customers.filter(c => c.riskRating === 'low').length,
   };
 
-  const amlAlerts = mockCustomers.reduce((acc, customer) => acc + customer.amlFlags.length, 0);
-  const totalBalance = mockCustomers.reduce((acc, customer) => acc + customer.accountBalance, 0);
+  const amlAlerts = customers.reduce((acc, customer) => acc + customer.amlFlags.length, 0);
+  const totalBalance = customers.reduce((acc, customer) => acc + customer.accountBalance, 0);
+
+  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const jsonData = JSON.parse(e.target?.result as string);
+        if (Array.isArray(jsonData)) {
+          setCustomers(jsonData);
+          setSearchTerm(''); // Reset search when new data is loaded
+        } else {
+          alert('Invalid JSON format. Please upload an array of customer objects.');
+        }
+      } catch (error) {
+        alert('Error parsing JSON file. Please check the file format.');
+      }
+    };
+    reader.readAsText(file);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -56,7 +79,7 @@ export function Dashboard() {
               <Users className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{mockCustomers.length}</div>
+              <div className="text-2xl font-bold">{customers.length}</div>
             </CardContent>
           </Card>
 
@@ -112,10 +135,21 @@ export function Dashboard() {
                   className="pl-10"
                 />
               </div>
-              <Button variant="outline" className="sm:w-auto">
-                <Filter className="h-4 w-4 mr-2" />
-                Advanced Filters
+              <Button 
+                variant="outline" 
+                onClick={() => fileInputRef.current?.click()}
+                className="sm:w-auto"
+              >
+                <Upload className="h-4 w-4 mr-2" />
+                Load JSON Data
               </Button>
+              <input
+                type="file"
+                ref={fileInputRef}
+                onChange={handleFileUpload}
+                accept=".json"
+                className="hidden"
+              />
             </div>
           </CardContent>
         </Card>
