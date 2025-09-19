@@ -47,6 +47,26 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Financial dashboard colors
+        risk: {
+          high: "hsl(var(--risk-high))",
+          "high-foreground": "hsl(var(--risk-high-foreground))",
+          medium: "hsl(var(--risk-medium))",
+          "medium-foreground": "hsl(var(--risk-medium-foreground))",
+          low: "hsl(var(--risk-low))",
+          "low-foreground": "hsl(var(--risk-low-foreground))",
+        },
+        aml: {
+          alert: "hsl(var(--aml-alert))",
+          "alert-foreground": "hsl(var(--aml-alert-foreground))",
+          warning: "hsl(var(--aml-warning))",
+          "warning-foreground": "hsl(var(--aml-warning-foreground))",
+        },
+        financial: {
+          primary: "hsl(var(--financial-primary))",
+          secondary: "hsl(var(--financial-secondary))",
+          accent: "hsl(var(--financial-accent))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

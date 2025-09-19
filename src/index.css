@@ -8,33 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 210 20% 98%;
+    --foreground: 220 13% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 13% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 13% 18%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 220 13% 18%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 217 10% 95%;
+    --muted-foreground: 220 9% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 217 10% 95%;
+    --accent-foreground: 220 13% 18%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 217 12% 89%;
+    --input: 217 12% 89%;
+    --ring: 217 91% 60%;
+
+    /* Financial dashboard specific colors */
+    --risk-high: 0 72% 51%;
+    --risk-high-foreground: 0 0% 100%;
+    --risk-medium: 45 93% 58%;
+    --risk-medium-foreground: 0 0% 0%;
+    --risk-low: 142 71% 45%;
+    --risk-low-foreground: 0 0% 100%;
+    
+    --aml-alert: 0 84% 60%;
+    --aml-alert-foreground: 0 0% 100%;
+    --aml-warning: 38 92% 50%;
+    --aml-warning-foreground: 0 0% 0%;
+    
+    --financial-primary: 217 91% 60%;
+    --financial-secondary: 220 14% 96%;
+    --financial-accent: 142 71% 45%;
+    
+    /* Gradients */
+    --gradient-dashboard: linear-gradient(135deg, hsl(217 91% 60% / 0.1), hsl(142 71% 45% / 0.1));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(217 10% 98%));
+    
+    /* Shadows */
+    --shadow-financial: 0 4px 12px hsl(217 91% 60% / 0.15);
+    --shadow-card: 0 2px 8px hsl(220 13% 18% / 0.1);
 
     --radius: 0.5rem;
 
