@@ -37,14 +37,49 @@ export function Dashboard() {
     reader.onload = (e) => {
       try {
         const jsonData = JSON.parse(e.target?.result as string);
-        if (Array.isArray(jsonData)) {
-          setCustomers(jsonData);
-          setSearchTerm(''); // Reset search when new data is loaded
-        } else {
+        
+        if (!Array.isArray(jsonData)) {
           alert('Invalid JSON format. Please upload an array of customer objects.');
+          return;
+        }
+
+        // Basic validation to ensure the data structure is correct
+        const isValidData = jsonData.length > 0 && jsonData.every((item: unknown) => {
+          if (typeof item !== 'object' || item === null) return false;
+          const customer = item as Record<string, unknown>;
+          return (
+            typeof customer.id === 'string' &&
+            typeof customer.name === 'string' &&
+            typeof customer.city === 'string' &&
+            ['high', 'medium', 'low'].includes(customer.riskRating as string) &&
+            typeof customer.creditScore === 'number' &&
+            typeof customer.accountBalance === 'number' &&
+            typeof customer.transactionVolume === 'number' &&
+            Array.isArray(customer.amlFlags) &&
+            Array.isArray(customer.riskFactors) &&
+            typeof customer.joinDate === 'string' &&
+            typeof customer.lastActivity === 'string'
+          );
+        });
+
+        if (!isValidData && jsonData.length > 0) {
+          alert('Invalid customer data structure. Please ensure your JSON matches the required format.');
+          console.log('First item structure:', jsonData[0]);
+          return;
+        }
+
+        setCustomers(jsonData as Customer[]);
+        setSearchTerm(''); // Reset search when new data is loaded
+        console.log('Loaded customers:', jsonData);
+        alert(`Successfully loaded ${jsonData.length} customers!`);
+        
+        // Reset file input
+        if (fileInputRef.current) {
+          fileInputRef.current.value = '';
         }
       } catch (error) {
         alert('Error parsing JSON file. Please check the file format.');
+        console.error('JSON parsing error:', error);
       }
     };
     reader.readAsText(file);

@@ -1,0 +1,696 @@
+[
+  {
+    "id": "sample-1",
+    "name": "Alice Smith",
+    "city": "Boston, MA",
+    "riskRating": "low",
+    "creditScore": 750,
+    "accountBalance": 125000,
+    "transactionVolume": 35000,
+    "amlFlags": [],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "credit",
+        "description": "Excellent credit history",
+        "impact": "positive",
+        "weight": 0.8
+      }
+    ],
+    "joinDate": "2020-05-15",
+    "lastActivity": "2024-01-20"
+  },
+  {
+    "id": "sample-2",
+    "name": "Bob Johnson",
+    "city": "Denver, CO",
+    "riskRating": "medium",
+    "creditScore": 650,
+    "accountBalance": 85000,
+    "transactionVolume": 50000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "suspicious_transactions",
+        "severity": "medium",
+        "description": "Large cash transactions detected",
+        "dateDetected": "2024-01-15"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "transaction_pattern",
+        "description": "Irregular transaction patterns",
+        "impact": "negative",
+        "weight": 0.6
+      }
+    ],
+    "joinDate": "2022-03-10",
+    "lastActivity": "2024-01-19"
+  },
+  {
+    "id": "sample-3",
+    "name": "Carol Davis",
+    "city": "Phoenix, AZ",
+    "riskRating": "high",
+    "creditScore": 500,
+    "accountBalance": 15000,
+    "transactionVolume": 95000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "high_risk_country",
+        "severity": "high",
+        "description": "Transactions to high-risk jurisdictions",
+        "dateDetected": "2024-01-10"
+      },
+      {
+        "id": "2",
+        "type": "suspicious_transactions",
+        "severity": "high",
+        "description": "Potential structuring behavior",
+        "dateDetected": "2024-01-12"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "geographic",
+        "description": "High-risk transaction locations",
+        "impact": "negative",
+        "weight": 0.9
+      },
+      {
+        "id": "2",
+        "category": "credit",
+        "description": "Poor credit score",
+        "impact": "negative",
+        "weight": 0.7
+      }
+    ],
+    "joinDate": "2023-08-20",
+    "lastActivity": "2024-01-18"
+  },
+  {
+    "id": "sample-4",
+    "name": "David Wilson",
+    "city": "Atlanta, GA",
+    "riskRating": "low",
+    "creditScore": 720,
+    "accountBalance": 180000,
+    "transactionVolume": 28000,
+    "amlFlags": [],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "credit",
+        "description": "Strong payment history",
+        "impact": "positive",
+        "weight": 0.7
+      },
+      {
+        "id": "2",
+        "category": "behavioral",
+        "description": "Conservative spending patterns",
+        "impact": "positive",
+        "weight": 0.6
+      }
+    ],
+    "joinDate": "2019-11-22",
+    "lastActivity": "2024-01-21"
+  },
+  {
+    "id": "sample-5",
+    "name": "Emily Rodriguez",
+    "city": "Los Angeles, CA",
+    "riskRating": "medium",
+    "creditScore": 680,
+    "accountBalance": 95000,
+    "transactionVolume": 65000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "pep",
+        "severity": "medium",
+        "description": "Related to politically exposed person",
+        "dateDetected": "2024-01-08"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "behavioral",
+        "description": "PEP association requires monitoring",
+        "impact": "negative",
+        "weight": 0.5
+      }
+    ],
+    "joinDate": "2021-06-14",
+    "lastActivity": "2024-01-20"
+  },
+  {
+    "id": "sample-6",
+    "name": "Frank Thompson",
+    "city": "Chicago, IL",
+    "riskRating": "high",
+    "creditScore": 480,
+    "accountBalance": 22000,
+    "transactionVolume": 120000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "sanctions_match",
+        "severity": "high",
+        "description": "Name similarity to sanctioned individual",
+        "dateDetected": "2024-01-14"
+      },
+      {
+        "id": "2",
+        "type": "suspicious_transactions",
+        "severity": "high",
+        "description": "Rapid movement of large amounts",
+        "dateDetected": "2024-01-16"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "behavioral",
+        "description": "Potential sanctions match",
+        "impact": "negative",
+        "weight": 1.0
+      },
+      {
+        "id": "2",
+        "category": "transaction_pattern",
+        "description": "Layering behavior detected",
+        "impact": "negative",
+        "weight": 0.9
+      }
+    ],
+    "joinDate": "2023-12-05",
+    "lastActivity": "2024-01-17"
+  },
+  {
+    "id": "sample-7",
+    "name": "Grace Chen",
+    "city": "San Francisco, CA",
+    "riskRating": "low",
+    "creditScore": 780,
+    "accountBalance": 210000,
+    "transactionVolume": 42000,
+    "amlFlags": [],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "credit",
+        "description": "Excellent credit profile",
+        "impact": "positive",
+        "weight": 0.9
+      }
+    ],
+    "joinDate": "2018-04-30",
+    "lastActivity": "2024-01-21"
+  },
+  {
+    "id": "sample-8",
+    "name": "Henry Martinez",
+    "city": "Miami, FL",
+    "riskRating": "medium",
+    "creditScore": 620,
+    "accountBalance": 68000,
+    "transactionVolume": 78000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "high_risk_country",
+        "severity": "medium",
+        "description": "Frequent transactions to offshore accounts",
+        "dateDetected": "2024-01-11"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "geographic",
+        "description": "Offshore transaction patterns",
+        "impact": "negative",
+        "weight": 0.7
+      }
+    ],
+    "joinDate": "2022-09-18",
+    "lastActivity": "2024-01-19"
+  },
+  {
+    "id": "sample-9",
+    "name": "Isabella Brown",
+    "city": "Seattle, WA",
+    "riskRating": "low",
+    "creditScore": 740,
+    "accountBalance": 165000,
+    "transactionVolume": 31000,
+    "amlFlags": [],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "credit",
+        "description": "Stable credit performance",
+        "impact": "positive",
+        "weight": 0.8
+      },
+      {
+        "id": "2",
+        "category": "behavioral",
+        "description": "Predictable transaction patterns",
+        "impact": "positive",
+        "weight": 0.7
+      }
+    ],
+    "joinDate": "2020-02-28",
+    "lastActivity": "2024-01-20"
+  },
+  {
+    "id": "sample-10",
+    "name": "Jack Anderson",
+    "city": "Dallas, TX",
+    "riskRating": "high",
+    "creditScore": 520,
+    "accountBalance": 35000,
+    "transactionVolume": 110000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "suspicious_transactions",
+        "severity": "high",
+        "description": "Structuring transactions below reporting threshold",
+        "dateDetected": "2024-01-13"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "transaction_pattern",
+        "description": "Potential structuring activity",
+        "impact": "negative",
+        "weight": 0.8
+      },
+      {
+        "id": "2",
+        "category": "credit",
+        "description": "Poor credit management",
+        "impact": "negative",
+        "weight": 0.6
+      }
+    ],
+    "joinDate": "2023-10-12",
+    "lastActivity": "2024-01-18"
+  },
+  {
+    "id": "sample-11",
+    "name": "Karen White",
+    "city": "Portland, OR",
+    "riskRating": "medium",
+    "creditScore": 660,
+    "accountBalance": 92000,
+    "transactionVolume": 55000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "suspicious_transactions",
+        "severity": "medium",
+        "description": "Unusual cash deposit patterns",
+        "dateDetected": "2024-01-09"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "transaction_pattern",
+        "description": "Irregular cash deposits",
+        "impact": "negative",
+        "weight": 0.6
+      }
+    ],
+    "joinDate": "2021-12-07",
+    "lastActivity": "2024-01-21"
+  },
+  {
+    "id": "sample-12",
+    "name": "Luis Garcia",
+    "city": "Houston, TX",
+    "riskRating": "low",
+    "creditScore": 710,
+    "accountBalance": 140000,
+    "transactionVolume": 38000,
+    "amlFlags": [],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "credit",
+        "description": "Good credit standing",
+        "impact": "positive",
+        "weight": 0.7
+      }
+    ],
+    "joinDate": "2019-08-16",
+    "lastActivity": "2024-01-20"
+  },
+  {
+    "id": "sample-13",
+    "name": "Maria Lopez",
+    "city": "Las Vegas, NV",
+    "riskRating": "high",
+    "creditScore": 490,
+    "accountBalance": 18000,
+    "transactionVolume": 135000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "high_risk_country",
+        "severity": "high",
+        "description": "Multiple transactions to sanctioned countries",
+        "dateDetected": "2024-01-06"
+      },
+      {
+        "id": "2",
+        "type": "suspicious_transactions",
+        "severity": "high",
+        "description": "Complex layering schemes detected",
+        "dateDetected": "2024-01-15"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "geographic",
+        "description": "High-risk jurisdiction exposure",
+        "impact": "negative",
+        "weight": 0.95
+      },
+      {
+        "id": "2",
+        "category": "transaction_pattern",
+        "description": "Complex money laundering indicators",
+        "impact": "negative",
+        "weight": 0.9
+      }
+    ],
+    "joinDate": "2023-11-28",
+    "lastActivity": "2024-01-17"
+  },
+  {
+    "id": "sample-14",
+    "name": "Nathan Taylor",
+    "city": "Minneapolis, MN",
+    "riskRating": "low",
+    "creditScore": 760,
+    "accountBalance": 195000,
+    "transactionVolume": 29000,
+    "amlFlags": [],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "credit",
+        "description": "Excellent financial management",
+        "impact": "positive",
+        "weight": 0.85
+      },
+      {
+        "id": "2",
+        "category": "behavioral",
+        "description": "Long-term stable customer",
+        "impact": "positive",
+        "weight": 0.8
+      }
+    ],
+    "joinDate": "2017-09-12",
+    "lastActivity": "2024-01-21"
+  },
+  {
+    "id": "sample-15",
+    "name": "Olivia Clark",
+    "city": "Nashville, TN",
+    "riskRating": "medium",
+    "creditScore": 640,
+    "accountBalance": 77000,
+    "transactionVolume": 62000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "pep",
+        "severity": "medium",
+        "description": "Family member of politically exposed person",
+        "dateDetected": "2024-01-07"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "behavioral",
+        "description": "PEP family connection",
+        "impact": "negative",
+        "weight": 0.6
+      }
+    ],
+    "joinDate": "2022-01-25",
+    "lastActivity": "2024-01-19"
+  },
+  {
+    "id": "sample-16",
+    "name": "Paul Walker",
+    "city": "Salt Lake City, UT",
+    "riskRating": "low",
+    "creditScore": 730,
+    "accountBalance": 158000,
+    "transactionVolume": 33000,
+    "amlFlags": [],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "credit",
+        "description": "Strong creditworthiness",
+        "impact": "positive",
+        "weight": 0.8
+      }
+    ],
+    "joinDate": "2020-07-09",
+    "lastActivity": "2024-01-20"
+  },
+  {
+    "id": "sample-17",
+    "name": "Quinn Roberts",
+    "city": "San Diego, CA",
+    "riskRating": "medium",
+    "creditScore": 670,
+    "accountBalance": 89000,
+    "transactionVolume": 58000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "suspicious_transactions",
+        "severity": "medium",
+        "description": "Frequent round-dollar transactions",
+        "dateDetected": "2024-01-12"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "transaction_pattern",
+        "description": "Unusual transaction rounding patterns",
+        "impact": "negative",
+        "weight": 0.5
+      }
+    ],
+    "joinDate": "2021-10-03",
+    "lastActivity": "2024-01-18"
+  },
+  {
+    "id": "sample-18",
+    "name": "Rachel Green",
+    "city": "Tampa, FL",
+    "riskRating": "high",
+    "creditScore": 510,
+    "accountBalance": 28000,
+    "transactionVolume": 98000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "sanctions_match",
+        "severity": "high",
+        "description": "Address match with sanctioned entity",
+        "dateDetected": "2024-01-11"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "behavioral",
+        "description": "Sanctions screening alert",
+        "impact": "negative",
+        "weight": 0.95
+      },
+      {
+        "id": "2",
+        "category": "credit",
+        "description": "Subprime credit profile",
+        "impact": "negative",
+        "weight": 0.7
+      }
+    ],
+    "joinDate": "2023-09-14",
+    "lastActivity": "2024-01-16"
+  },
+  {
+    "id": "sample-19",
+    "name": "Samuel Lee",
+    "city": "Austin, TX",
+    "riskRating": "low",
+    "creditScore": 770,
+    "accountBalance": 225000,
+    "transactionVolume": 41000,
+    "amlFlags": [],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "credit",
+        "description": "Premium credit tier customer",
+        "impact": "positive",
+        "weight": 0.9
+      },
+      {
+        "id": "2",
+        "category": "behavioral",
+        "description": "High-value stable customer",
+        "impact": "positive",
+        "weight": 0.8
+      }
+    ],
+    "joinDate": "2018-12-20",
+    "lastActivity": "2024-01-21"
+  },
+  {
+    "id": "sample-20",
+    "name": "Tina Johnson",
+    "city": "Charlotte, NC",
+    "riskRating": "medium",
+    "creditScore": 690,
+    "accountBalance": 103000,
+    "transactionVolume": 47000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "suspicious_transactions",
+        "severity": "medium",
+        "description": "Cross-border wire transfer patterns",
+        "dateDetected": "2024-01-10"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "transaction_pattern",
+        "description": "International wire transfer activity",
+        "impact": "negative",
+        "weight": 0.6
+      }
+    ],
+    "joinDate": "2021-04-18",
+    "lastActivity": "2024-01-19"
+  },
+  {
+    "id": "sample-21",
+    "name": "Victor Patel",
+    "city": "San Jose, CA",
+    "riskRating": "low",
+    "creditScore": 745,
+    "accountBalance": 172000,
+    "transactionVolume": 36000,
+    "amlFlags": [],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "credit",
+        "description": "Excellent payment history",
+        "impact": "positive",
+        "weight": 0.8
+      }
+    ],
+    "joinDate": "2019-05-26",
+    "lastActivity": "2024-01-20"
+  },
+  {
+    "id": "sample-22",
+    "name": "Wendy Adams",
+    "city": "Kansas City, MO",
+    "riskRating": "high",
+    "creditScore": 475,
+    "accountBalance": 19500,
+    "transactionVolume": 115000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "high_risk_country",
+        "severity": "high",
+        "description": "Transactions to countries with weak AML controls",
+        "dateDetected": "2024-01-08"
+      },
+      {
+        "id": "2",
+        "type": "suspicious_transactions",
+        "severity": "high",
+        "description": "Smurfing activity detected",
+        "dateDetected": "2024-01-14"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "geographic",
+        "description": "High-risk country exposure",
+        "impact": "negative",
+        "weight": 0.9
+      },
+      {
+        "id": "2",
+        "category": "transaction_pattern",
+        "description": "Smurfing indicators present",
+        "impact": "negative",
+        "weight": 0.85
+      }
+    ],
+    "joinDate": "2023-07-31",
+    "lastActivity": "2024-01-17"
+  },
+  {
+    "id": "sample-23",
+    "name": "Xavier Kim",
+    "city": "Raleigh, NC",
+    "riskRating": "medium",
+    "creditScore": 655,
+    "accountBalance": 84000,
+    "transactionVolume": 52000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "pep",
+        "severity": "medium",
+        "description": "Business associate of PEP",
+        "dateDetected": "2024-01-09"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "behavioral",
+        "description": "PEP business association",
+        "impact": "negative",
+        "weight": 0.55
+      }
+    ],
+    "joinDate": "2022-11-11",
+    "lastActivity": "2024-01-18"
+  }
+]
+
