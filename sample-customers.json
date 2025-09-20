@@ -691,6 +691,349 @@
     ],
     "joinDate": "2022-11-11",
     "lastActivity": "2024-01-18"
+  },
+  {
+    "id": "sample-24",
+    "name": "Yuki Tanaka",
+    "city": "Honolulu, HI",
+    "riskRating": "low",
+    "creditScore": 735,
+    "accountBalance": 148000,
+    "transactionVolume": 32000,
+    "amlFlags": [],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "credit",
+        "description": "Consistent payment history",
+        "impact": "positive",
+        "weight": 0.8
+      },
+      {
+        "id": "2",
+        "category": "behavioral",
+        "description": "Stable long-term customer",
+        "impact": "positive",
+        "weight": 0.7
+      }
+    ],
+    "joinDate": "2020-01-15",
+    "lastActivity": "2024-01-21"
+  },
+  {
+    "id": "sample-25",
+    "name": "Zachary Miller",
+    "city": "Richmond, VA",
+    "riskRating": "high",
+    "creditScore": 465,
+    "accountBalance": 12500,
+    "transactionVolume": 145000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "high_risk_country",
+        "severity": "high",
+        "description": "Regular transfers to shell company jurisdictions",
+        "dateDetected": "2024-01-05"
+      },
+      {
+        "id": "2",
+        "type": "suspicious_transactions",
+        "severity": "high",
+        "description": "Complex nested transaction structures",
+        "dateDetected": "2024-01-13"
+      },
+      {
+        "id": "3",
+        "type": "sanctions_match",
+        "severity": "high",
+        "description": "Business partner on sanctions watch list",
+        "dateDetected": "2024-01-16"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "geographic",
+        "description": "Shell company jurisdiction exposure",
+        "impact": "negative",
+        "weight": 0.95
+      },
+      {
+        "id": "2",
+        "category": "transaction_pattern",
+        "description": "Complex layering structures",
+        "impact": "negative",
+        "weight": 0.9
+      },
+      {
+        "id": "3",
+        "category": "behavioral",
+        "description": "Sanctions watch list association",
+        "impact": "negative",
+        "weight": 1.0
+      }
+    ],
+    "joinDate": "2023-06-22",
+    "lastActivity": "2024-01-15"
+  },
+  {
+    "id": "sample-26",
+    "name": "Amanda Foster",
+    "city": "Buffalo, NY",
+    "riskRating": "medium",
+    "creditScore": 675,
+    "accountBalance": 78500,
+    "transactionVolume": 48000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "suspicious_transactions",
+        "severity": "medium",
+        "description": "Frequent cash transactions just under CTR threshold",
+        "dateDetected": "2024-01-12"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "transaction_pattern",
+        "description": "Potential threshold avoidance behavior",
+        "impact": "negative",
+        "weight": 0.7
+      }
+    ],
+    "joinDate": "2021-08-30",
+    "lastActivity": "2024-01-19"
+  },
+  {
+    "id": "sample-27",
+    "name": "Benjamin Wright",
+    "city": "Albuquerque, NM",
+    "riskRating": "low",
+    "creditScore": 755,
+    "accountBalance": 186000,
+    "transactionVolume": 35500,
+    "amlFlags": [],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "credit",
+        "description": "Excellent debt-to-income ratio",
+        "impact": "positive",
+        "weight": 0.85
+      },
+      {
+        "id": "2",
+        "category": "behavioral",
+        "description": "Consistent savings patterns",
+        "impact": "positive",
+        "weight": 0.8
+      }
+    ],
+    "joinDate": "2018-10-08",
+    "lastActivity": "2024-01-20"
+  },
+  {
+    "id": "sample-28",
+    "name": "Catherine Moore",
+    "city": "Louisville, KY",
+    "riskRating": "medium",
+    "creditScore": 645,
+    "accountBalance": 91500,
+    "transactionVolume": 59000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "pep",
+        "severity": "medium",
+        "description": "Spouse works for regulatory agency",
+        "dateDetected": "2024-01-06"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "behavioral",
+        "description": "Regulatory agency family connection",
+        "impact": "negative",
+        "weight": 0.6
+      }
+    ],
+    "joinDate": "2022-05-17",
+    "lastActivity": "2024-01-18"
+  },
+  {
+    "id": "sample-29",
+    "name": "Daniel Harrison",
+    "city": "Tucson, AZ",
+    "riskRating": "high",
+    "creditScore": 495,
+    "accountBalance": 24000,
+    "transactionVolume": 128000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "suspicious_transactions",
+        "severity": "high",
+        "description": "Rapid account turnover with minimal balance retention",
+        "dateDetected": "2024-01-11"
+      },
+      {
+        "id": "2",
+        "type": "high_risk_country",
+        "severity": "high",
+        "description": "Wire transfers to cryptocurrency exchange havens",
+        "dateDetected": "2024-01-14"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "transaction_pattern",
+        "description": "Rapid turnover patterns",
+        "impact": "negative",
+        "weight": 0.85
+      },
+      {
+        "id": "2",
+        "category": "geographic",
+        "description": "Crypto haven jurisdiction exposure",
+        "impact": "negative",
+        "weight": 0.8
+      }
+    ],
+    "joinDate": "2023-09-03",
+    "lastActivity": "2024-01-16"
+  },
+  {
+    "id": "sample-30",
+    "name": "Elena Vasquez",
+    "city": "El Paso, TX",
+    "riskRating": "medium",
+    "creditScore": 685,
+    "accountBalance": 105000,
+    "transactionVolume": 61000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "suspicious_transactions",
+        "severity": "medium",
+        "description": "Cross-border remittance patterns requiring monitoring",
+        "dateDetected": "2024-01-08"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "geographic",
+        "description": "High-volume cross-border activity",
+        "impact": "negative",
+        "weight": 0.6
+      }
+    ],
+    "joinDate": "2021-11-23",
+    "lastActivity": "2024-01-19"
+  },
+  {
+    "id": "sample-31",
+    "name": "Frederick Stone",
+    "city": "Anchorage, AK",
+    "riskRating": "low",
+    "creditScore": 725,
+    "accountBalance": 167000,
+    "transactionVolume": 37000,
+    "amlFlags": [],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "credit",
+        "description": "Strong financial discipline",
+        "impact": "positive",
+        "weight": 0.8
+      },
+      {
+        "id": "2",
+        "category": "behavioral",
+        "description": "Low-risk geographic location",
+        "impact": "positive",
+        "weight": 0.6
+      }
+    ],
+    "joinDate": "2019-03-14",
+    "lastActivity": "2024-01-21"
+  },
+  {
+    "id": "sample-32",
+    "name": "Gabriella Santos",
+    "city": "San Antonio, TX",
+    "riskRating": "high",
+    "creditScore": 485,
+    "accountBalance": 31000,
+    "transactionVolume": 112000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "suspicious_transactions",
+        "severity": "high",
+        "description": "Bulk cash structuring across multiple accounts",
+        "dateDetected": "2024-01-09"
+      },
+      {
+        "id": "2",
+        "type": "sanctions_match",
+        "severity": "high",
+        "description": "Previous address linked to sanctioned entity",
+        "dateDetected": "2024-01-17"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "transaction_pattern",
+        "description": "Multi-account structuring behavior",
+        "impact": "negative",
+        "weight": 0.9
+      },
+      {
+        "id": "2",
+        "category": "behavioral",
+        "description": "Historical sanctions exposure",
+        "impact": "negative",
+        "weight": 0.95
+      }
+    ],
+    "joinDate": "2023-08-07",
+    "lastActivity": "2024-01-18"
+  },
+  {
+    "id": "sample-33",
+    "name": "Harrison Cooper",
+    "city": "Providence, RI",
+    "riskRating": "medium",
+    "creditScore": 665,
+    "accountBalance": 87000,
+    "transactionVolume": 54000,
+    "amlFlags": [
+      {
+        "id": "1",
+        "type": "pep",
+        "severity": "medium",
+        "description": "Former government contractor with security clearance",
+        "dateDetected": "2024-01-10"
+      }
+    ],
+    "riskFactors": [
+      {
+        "id": "1",
+        "category": "behavioral",
+        "description": "Former government contractor status",
+        "impact": "negative",
+        "weight": 0.5
+      }
+    ],
+    "joinDate": "2022-02-11",
+    "lastActivity": "2024-01-20"
   }
 ]
 
